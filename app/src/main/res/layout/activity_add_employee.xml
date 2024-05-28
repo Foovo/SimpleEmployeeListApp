@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:background="#FFFFFF"
+    tools:context=".AddEmployee">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#4DAC73"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textAddEmployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Add new employee"
+        android:textAlignment="center"
+
+        android:textSize="34sp"
+
+        android:textColor="#FFFFFF"
+        android:shadowColor="#2F4F4F"
+        android:shadowDx="-2"
+        android:shadowDy="-2"
+        android:shadowRadius="10"
+
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbName"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="20dp"
+        android:background="#D9DADA"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+
+        app:layout_constraintBottom_toTopOf="@+id/textSurname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+         />
+
+    <EditText
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Input name"
+        android:textColorHint="#808080"
+        android:textColor="#2F4F4F"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tbName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tbName"
+        app:layout_constraintTop_toTopOf="@+id/tbName"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbSurname"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+
+        android:background="#D9DADA"
+        android:minHeight="?attr/actionBarSize"
+
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/textAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbName"
+       />
+
+    <EditText
+        android:id="@+id/textSurname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Input surname"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        android:textColor="#2F4F4F"
+        android:paddingStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tbSurname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbSurname" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbAge"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+
+        android:background="#D9DADA"
+        android:minHeight="?attr/actionBarSize"
+
+        android:theme="?attr/actionBarTheme"
+
+        app:layout_constraintBottom_toTopOf="@+id/radio_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbSurname" />
+
+    <EditText
+        android:id="@+id/textAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Input age"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        android:textColor="#2F4F4F"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tbAge"
+        app:layout_constraintTop_toTopOf="@+id/tbAge"
+        tools:layout_editor_absoluteY="263dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbGender"
+        android:layout_width="409dp"
+        android:layout_height="150dp"
+        android:background="#D9DADA"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingStart="10dp"
+
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbAge"
+        app:layout_constraintBottom_toTopOf="@id/btnAdd"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.359" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/tbGender"
+        app:layout_constraintTop_toTopOf="@+id/tbGender"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <TextView
+            android:id="@+id/textChooseGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose gender"
+            android:textColor="#2F4F4F"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="#2F4F4F" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="#2F4F4F" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:backgroundTint="#4DAC73"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Name"
+        android:textSize="20dp"
+        android:layout_marginStart="8dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/tbName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Surname"
+        android:textSize="20dp"
+        android:layout_marginStart="8dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/tbSurname"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:text="Age"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/tbAge"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textErr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FB0000"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbGender" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
